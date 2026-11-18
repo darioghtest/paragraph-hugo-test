@@ -1,0 +1,12 @@
+baseURL = 'https://darioghtest.github.io/paragraph-hugo-test/'
+languageCode = 'en-us'
+title = 'Harbor Blog'
+
+[params]
+  description = 'Release notes and engineering stories from the Harbor team.'
+
+[taxonomies]
+  tag = 'tags'
+
+[markup.goldmark.renderer]
+  unsafe = false

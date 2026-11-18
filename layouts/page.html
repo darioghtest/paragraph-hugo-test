@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <article>
+    <h1>{{ .Title }}</h1>
+    <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+    {{ with .GetTerms "tags" }}
+      <p class="tags">
+        {{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+      </p>
+    {{ end }}
+    {{ .Content }}
+  </article>
+  <p><a href="{{ "blog/" | relURL }}">&larr; All posts</a></p>
+{{ end }}
